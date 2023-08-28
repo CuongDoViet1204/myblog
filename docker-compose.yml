@@ -1,0 +1,36 @@
+version: "3.1"
+services:
+    php:
+      build:
+        context: ./
+        dockerfile: php.Dockerfile
+      image: php:7.4-fpm-alpine
+      container_name: php-74-myblog
+      volumes:
+        - ./:/var/www/html
+
+    webserver:
+      image: nginx:1.17.10
+      container_name: nginx-webserver-myblog
+      links:
+        - php:fpm
+      environment:
+        - FPM_HOST=fpm
+        - FPM_PORT=9000
+      volumes:
+        - ./:/var/www/html
+        - ./docker/nginx_conf:/etc/nginx/conf.d/
+      ports:
+        - "8080:80"
+
+    db:
+      platform: linux/x86_64
+      image: mysql:5.7
+      container_name: mysql-db-myblog
+      environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: btlBlog
+        MYSQL_USER: sampleUser
+        MYSQL_PASSWORD: password
+      ports:
+        - 3306:3306

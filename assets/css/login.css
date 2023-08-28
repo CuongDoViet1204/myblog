@@ -1,0 +1,145 @@
+.body {
+    position: relative;
+}
+
+.header {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white-color);
+    padding: 20px;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header__logo-icon {
+    padding: 5px;
+    background-color: #f38b38;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.btn-login {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.btn-login:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.container {
+    margin-top: 40px;
+}
+
+.container__content {
+    text-align: center;
+    position: relative;
+    z-index: 100;
+    color: var(--white-color);
+}
+
+.container__content-title {
+    font-size: 36px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.container__content-descri {
+    font-size: 18px;
+}   
+
+.container__bgr {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #388d80;
+    overflow: hidden;
+}
+
+.container__bgr-green.active {
+    /* transform: translateY(0);
+    opacity: 1; */
+}
+
+.container__bgr-green {
+    /* transform: translateY(100%);
+    transition: opacity .8s ease-in;
+    transition: transform 1.4s ease-in;
+    opacity: 1; */
+}
+
+.container__bgr-img {
+    position: absolute;
+}
+
+.container__bgr-green-img1 {
+    bottom: 20%;
+    left: -10%;
+    width: 21%;
+    transition-delay: .25s;
+}
+
+.container__bgr-green-img2 {
+    bottom: 45%;
+    left: 14%;
+    width: 11%;
+    transition-delay: .3s;
+}
+
+.container__bgr-green-img3 {
+    bottom: 23%;
+    right: -5%;
+    width: 15%;
+    transition-delay: .35s;
+}
+
+.container__bgr-green-img4 {
+    bottom: 0;
+    right: 3%;
+    width: 17%;
+    transition-delay: .4s;
+}
+
+.container__bgr-green-img5 {
+    bottom: 16%;
+    left: 8%;
+    transition-delay: .45s;
+}
+
+.container__bgr-green-img6 {
+    bottom: 31%;
+    right: 11%;
+    transition-delay: .5s;
+}
+
+.container__bgr-green-img7 {
+    bottom: 31%;
+    right: 11%;
+    transition-delay: .55s;
+}
+
+.container__bgr-green-img8 {
+    bottom: -13%;
+    left: 4%;
+    width: 15%;
+    transition-delay: .6s;
+}
+
+.container__bgr-green-img9 {
+    left: 24%;
+    width: 55%;
+    bottom: 0;
+    transition-delay: .65s;
+}
